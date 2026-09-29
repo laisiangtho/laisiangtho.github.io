@@ -1,0 +1,1 @@
+const n=49,a=57,o=25,t=66,s=33,c=44,h=3,e=null,l=null,K=7,i=36,u={"1Joh":62,"1Khang":13,"1Kor":46,"1Kum":11,"2Joh":63,"2Khang":14,"2Kor":47,"2Kum":12,Efe:49,File:57,Kah:25,Mang:66,Mik:33,Sawl:44,Siam:3,Thkna:null,Thna:null,Thu:7,Zefa:36};export{n as Efe,a as File,o as Kah,t as Mang,s as Mik,c as Sawl,h as Siam,e as Thkna,l as Thna,K as Thu,i as Zefa,u as default};
