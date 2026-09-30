@@ -6,8 +6,8 @@
  * Translations live in IndexedDB; cross-origin requests (the catalog and
  * translation downloads) are never intercepted.
  */
-const CACHE = 'lai-shell-6abddc4e6ee1';
-const PRECACHE = ["./assets/index-BqFnyHOa.js","./assets/index-CJosPEOO.css","./assets/library.worker-D7bKxTel.js","./assets/search.worker-lkeXcvCK.js","./assets/tedim1932-iSzL7-PG.js","./book.json","./category.json","./icons/favicon-32.png","./icons/icon-192.png","./icons/icon-512.png","./icons/icon.svg","./index.html","./manifest.webmanifest"];
+const CACHE = 'lai-shell-ba3843a758f7';
+const PRECACHE = ["./assets/index-WgCB-EDw.css","./assets/index-hORiqKts.js","./assets/library.worker-DFjH0A_h.js","./assets/pane-LyMAZHQn.js","./assets/search.worker-Bkrp18mU.js","./assets/tedim1932-iSzL7-PG.js","./book.json","./category.json","./icons/favicon-32.png","./icons/icon-192.png","./icons/icon-512.png","./icons/icon.svg","./index.html","./manifest.webmanifest"];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(PRECACHE)));
