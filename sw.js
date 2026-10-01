@@ -6,8 +6,8 @@
  * Translations live in IndexedDB; cross-origin requests (the catalog and
  * translation downloads) are never intercepted.
  */
-const CACHE = 'lai-shell-17506d6fbe25';
-const PRECACHE = ["./assets/index-BCI_lffj.js","./assets/index-D3BXQWFG.css","./assets/library.worker-DlmSyNiJ.js","./assets/pane-lz07qnG9.js","./assets/search.worker-NVPZQQuV.js","./assets/tedim1932-iSzL7-PG.js","./book.json","./category.json","./icons/favicon-32.png","./icons/icon-192.png","./icons/icon-512.png","./icons/icon-maskable-512.png","./icons/icon.svg","./index.html","./manifest.webmanifest"];
+const CACHE = 'lai-shell-eb63e2726029';
+const PRECACHE = ["./assets/cards-DqKIt7Y8.js","./assets/index-CaTgzuAi.js","./assets/index-rh7Ak9SG.css","./assets/knowledge-D9tHx4ao.js","./assets/library.worker-B2cXAmnL.js","./assets/morph-data-Bgj6wcIa.js","./assets/pane-B0pErVLX.js","./assets/pane-DSnDlAE8.js","./assets/search.worker-DgzhIjOt.js","./assets/tedim1932-iSzL7-PG.js","./book.json","./category.json","./icons/favicon-32.png","./icons/icon-192.png","./icons/icon-512.png","./icons/icon-maskable-512.png","./icons/icon.svg","./index.html","./manifest.webmanifest"];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(PRECACHE)));
