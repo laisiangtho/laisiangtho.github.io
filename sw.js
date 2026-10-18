@@ -6,11 +6,14 @@
  * Translations live in IndexedDB; cross-origin requests (the catalog and
  * translation downloads) are never intercepted.
  */
-const CACHE = 'lai-shell-d39f25c4b016';
-const PRECACHE = ["./assets/cards-BM1LB5mG.js","./assets/index-CK9feNcw.css","./assets/index-DgtiB5DO.js","./assets/knowledge-BwX_I3c1.js","./assets/library.worker-QdiYLIvQ.js","./assets/morph-data-Bgj6wcIa.js","./assets/pane-CQ4KJDUC.js","./assets/pane-Cp2_FPQB.js","./assets/pane-Dku_JneS.js","./assets/search.worker-82d7lZyu.js","./assets/tedim1932-iSzL7-PG.js","./book.json","./category.json","./icons/favicon-32.png","./icons/icon-192.png","./icons/icon-512.png","./icons/icon-maskable-512.png","./icons/icon.svg","./index.html","./manifest.webmanifest"];
+const CACHE = 'lai-shell-9ac2d573e6f0';
+const PRECACHE = ["./assets/cards-BwpotMZ_.js","./assets/index-6OD8ds2G.css","./assets/index-rxWGyNIm.js","./assets/knowledge-C1bKuhh8.js","./assets/library.worker-Cs3kWIhc.js","./assets/morph-data-Bgj6wcIa.js","./assets/pane-8U3Efje4.js","./assets/pane-CikVpGY5.js","./assets/pane-MUv7gBjU.js","./assets/search.worker-CnrtrWgq.js","./assets/tedim1932-iSzL7-PG.js","./book.json","./category.json","./icons/favicon-32.png","./icons/icon-192.png","./icons/icon-512.png","./icons/icon-maskable-512.png","./icons/icon.svg","./index.html","./manifest.webmanifest"];
 
 self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(PRECACHE)));
+  // Past the HTTP cache: a host that lets browsers keep files for minutes
+  // (GitHub Pages: max-age=600) would otherwise hand this build's cache the
+  // previous index.html, whose hashed assets this build no longer has.
+  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(PRECACHE.map((url) => new Request(url, { cache: 'reload' })))));
 });
 
 self.addEventListener('activate', (event) => {
